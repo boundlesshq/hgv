@@ -62,7 +62,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
     config.vm.provider "virtualbox" do |vb|
-        vb.customize ["modifyvm", :id, "--memory", "1024"]
+        vb.customize ["modifyvm", :id, "--memory", "4096"]
+        vb.customize ["modifyvm", :id, "--vram", "128"]
+        vb.customize ["modifyvm", :id, "--cpus", "4"]
+        vb.customize ["modifyvm", :id, "--pae", "on"]
+        vb.customize ["modifyvm", :id, "--nonrotational", "on"]
+        vb.customize ["modifyvm", :id, "--paravirtprovider", "kvm"]
         vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
         vb.name = vagrant_name
