@@ -65,10 +65,10 @@ class BackendCookieCest
         $I->assertRegExp('#PHP/7\.0\.(.*)#', $I->grabHttpHeader('X-Powered-By'));
     }
 
-    // Test that can load the default WP with PHP 7.1
-    public function viewPageCookiePHP71(AcceptanceTester $I)
+    // Test that can load the default WP with PHP 7.2
+    public function viewPageCookiePHP72(AcceptanceTester $I)
     {
-        $I->setCookie('backend', 'php71');
+        $I->setCookie('backend', 'php72');
         $I->amOnUrl('http://hhvm.hgv.test');
         $I->amOnPage('/');
         $I->seeCurrentUrlEquals('/');

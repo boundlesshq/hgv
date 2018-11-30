@@ -1,8 +1,6 @@
----
-
 - include: php56.yml
 - include: php70.yml
-- include: php71.yml
+- include: php72.yml
 
 - name: Install PECL modules
   command: pecl install {{ item }}
@@ -29,13 +27,13 @@
 
 - name: Enable WordPress code sniffs
   command: phpcs --config-set installed_paths /usr/share/php/wpcs
-  
+
 # Set the alternatives deliberately, so the later versions don't override
-- name: Set PHP 7.1 bin as default
-  alternatives: name=php link=/usr/bin/php path=/usr/bin/php7.1
+- name: Set PHP 7.2 bin as default
+  alternatives: name=php link=/usr/bin/php path=/usr/bin/php7.2
 
-- name: Set PHP 7.1 config as default
-  alternatives: name=php-config link=/usr/bin/php-config path=/usr/bin/php-config7.1
+- name: Set PHP 7.2 config as default
+  alternatives: name=php-config link=/usr/bin/php-config path=/usr/bin/php-config7.2
 
-- name: Set PHP 7.1 ize as default
-  alternatives: name=phpize link=/usr/bin/phpize path=/usr/bin/phpize7.1
+- name: Set PHP 7.2 ize as default
+  alternatives: name=phpize link=/usr/bin/phpize path=/usr/bin/phpize7.2

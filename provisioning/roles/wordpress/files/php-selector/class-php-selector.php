@@ -18,8 +18,8 @@ class PHPSelector
         if( $this->poweredByHhvm() ) {
             return 'HHVM';
         }
-        if( $this->poweredByPhp71() ) {
-            return 'PHP 7.1';
+        if( $this->poweredByPhp72() ) {
+            return 'PHP 7.2';
         }
         // Example, 7.0.0-dev
         if( $this->poweredByPhp7() ) {
@@ -44,9 +44,9 @@ class PHPSelector
         return true;
     }
 
-    function poweredByPhp71() {
-        // Example, 7.1.0-dev
-        if( "7.1" == $this->getPhpVersion()) {
+    function poweredByPhp72() {
+        // Example, 7.2.0-dev
+        if( "7.2" == $this->getPhpVersion()) {
             return true;
         }
         return false;
@@ -115,9 +115,9 @@ class PHPSelector
         $wp_admin_bar->add_node( array(
                 'parent' => 'php_selector_link',
                 'id'     => 'php-selector-sevenone',
-                'title'  => 'PHP 7.1',
-                'href'   => $this->poweredByPhp71() ? '' : '#php71',
-                'meta'   => array('rel' => 'php71'),
+                'title'  => 'PHP 7.2',
+                'href'   => $this->poweredByPhp72() ? '' : '#php72',
+                'meta'   => array('rel' => 'php72'),
         ));
     }
 

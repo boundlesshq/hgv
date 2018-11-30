@@ -67,10 +67,10 @@ class UploadSizeWPCest
     /**
      * This test will check the file upload size limit in wp-admin media uploader
      */
-    public function checkFileUploadLimitPhp71(AcceptanceTester $I)
+    public function checkFileUploadLimitPhp72(AcceptanceTester $I)
     {
-        $I->wantTo('Log into site and check file upload on media page PHP 7.1');
-        $I->setCookie('backend', 'php71');
+        $I->wantTo('Log into site and check file upload on media page PHP 7.2');
+        $I->setCookie('backend', 'php72');
         $I->amOnUrl('http://hhvm.hgv.test');
         $I->amOnPage('/wp-login.php');
         $I->fillField('log', 'wordpress');
