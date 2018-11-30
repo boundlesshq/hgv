@@ -40,6 +40,9 @@ echo
 echo "Updating APT sources."
 echo
 apt-get update > /dev/null
+add-apt-repository ppa:fkrull/deadsnakes-python2.7
+apt-get update
+apt-get upgrade python
 echo
 echo "Installing for Ansible."
 echo
