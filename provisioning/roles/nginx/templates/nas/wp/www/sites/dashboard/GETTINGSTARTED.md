@@ -67,7 +67,7 @@ There is one default WordPress installation provided and accessible at two domai
 Both have an admin user `wordpress` with a password `wordpress` (so secure!) already created.
 
 ### Accessing the sites on-disk (docroot) ###
-The default WordPress installations are accessible directly by going to `[HGV directory]/hgv_data/sites/hhvm` in the Finder (Mac)/Explorer (Windows)/filesystem navigator of choice (Linux, Free/Open/NetBSD, etc.).  When logged into the Vagrant ssh terminal, they are located at `/nas/wp/www/sites/hhvm`.
+The default WordPress installations are accessible directly by going to `[HGV directory]/hgv_data/sites/php` in the Finder (Mac)/Explorer (Windows)/filesystem navigator of choice (Linux, Free/Open/NetBSD, etc.).  When logged into the Vagrant ssh terminal, they are located at `/nas/wp/www/sites/hhvm`.
 
 ### Developer Tools ###
 The following WordPress tools and plugins are installed on each WordPress site (but are **not** enabled) by default:
@@ -80,7 +80,7 @@ The following WordPress tools and plugins are installed on each WordPress site (
 * [Log Deprecated Notices](https://wordpress.org/plugins/log-deprecated-notices/)
 
 ### Installing plugins and themes ###
-Installing new plugins and themes is as simple as putting themes in `[HGV directory]/hgv_data/sites/hhvm/wp-content/[plugins|themes]`
+Installing new plugins and themes is as simple as putting themes in `[HGV directory]/hgv_data/sites/php/wp-content/[plugins|themes]`
 
 
 ## Add My Own WordPress ##
@@ -250,7 +250,7 @@ define('SAVEQUERIES', true);
 Enabling the Query Monitor WordPress plugin will allow logged-in users to view the useful debug information output by Xdebug, such as number of queries, number of objects, page render time, etc.
 
 ### XHProf ###
-HGV includes an advanced PHP/HHVM profiling tool, [http://php.net/xhprof](http://php.net/xhprof) and a GUI for viewing results. You can view results for your HGV instance at [xhprof.hgv.test](http://xhprof.hgv.test).  
+HGV includes an advanced PHP/HHVM profiling tool, [http://php.net/xhprof](http://php.net/xhprof) and a GUI for viewing results. You can view results for your HGV instance at [xhprof.hgv.test](http://xhprof.hgv.test).
 
 Initially, there will be no profiling data -- you'll need to enable profiling for the various HGV sites. You can enable profiling by passing `_profile=1` to any PHP request on the host. To get started, visit:
 
@@ -292,7 +292,7 @@ file_upload_max_size: 50
 
 Don't want to configure both domains for each WordPress' backend processor?  But still want to be able to flip between HHVM and PHP? Have a multisite WordPress which makes it difficult to add domains for each backend processor?
 
-Use a browser cookie to specify the backend. 
+Use a browser cookie to specify the backend.
 
 The name of the cookie is 'backend'. It accepts values `hhvm` or `php`. If the cookie does not exist or contains something other than the accepted values, it will be ignored and the mapped domain from the [provision file](/#mercury-vagrant-hgv-add-my-own-wordpress-the-provision-file) will be used.
 

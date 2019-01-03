@@ -5,7 +5,6 @@ shared_examples 'hosts::apps' do
   #
   apps = {
     'http://hgv.test/' => /<title>WP Engine Mercury Vagrant<\/title>/,
-    'http://hhvm.hgv.test/' => /<title>WP Engine hhvm Site | Just another WordPress site<\/title>/,
     'http://php.hgv.test/' => /<title>WP Engine php Site | Just another WordPress site<\/title>/,
     'http://admin.hgv.test/' => /<title>Admin - WP Engine Mercury Vagrant<\/title>/,
     'http://admin.hgv.test/phpmyadmin/' => /<title>phpMyAdmin<\/title>/,

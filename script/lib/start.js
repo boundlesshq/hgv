@@ -23,7 +23,6 @@ var fs = require( 'fs' ),
  */
 var defaults = {
 	enviro      : '',
-	hhvm_domains: [],
 	php_domains : [],
 	wpe_name    : '',
 	branch      : 'develop',
@@ -181,12 +180,6 @@ function init( enviro, file_path ) {
 
 	var schema = {
 		properties: {
-			hhvm_domains: {
-				description: 'HHVM project domains' + skip,
-				default    : defaults.hhvm_domains,
-				message    : 'HHVM project domains' + skip,
-				type       : 'array'
-			},
 			php_domains : {
 				description: 'PHP project domains' + skip,
 				default    : defaults.php_domains,
@@ -220,7 +213,6 @@ function init( enviro, file_path ) {
 		result.enviro = enviro;
 
 		// Split up any comma-separated lists in the arrays
-		result.hhvm_domains = uniq( fix_arrays( result.hhvm_domains ) );
 		result.php_domains = uniq( fix_arrays( result.php_domains ) );
 
 		// Set up our settings array

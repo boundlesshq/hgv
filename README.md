@@ -38,7 +38,7 @@ In order to use HGV effectively, you'll need to have a few tools installed on yo
  * Short version: `vagrant plugin install vagrant-ghost`
 6. **Suggestion:** Development workstation/laptop should have at least 8GB of RAM. hgv needs to allocate 1GB of RAM in order to run. (Users with <=4GB of RAM [e.g. base-model MacBook Airs] have seen overall system slowness while running this Vagrant box and much of anything else.)
 7. Windows users should be certain that their BIOS' virtualization settings are enabled. (Intel owners should enable VT-x while AMD owners should enable AMD-v. See [here](http://www.sysprobs.com/disable-enable-virtualization-technology-bios) for a better explanation.)
-8. **Recommendation:** This Vagrant box uses a 64 bit operating system (because HHVM requires a 64 bit OS), so we highly recommend that it only be run on 64 bit machines running 64 bit operating systems. (Most, if not all desktops and laptops sold in the last few years are running on 64 bit processors. Some may not be running 64 bit operating systems, however. Please check your system's documentation.) 
+8. **Recommendation:** This Vagrant box uses a 64 bit operating system (because HHVM requires a 64 bit OS), so we highly recommend that it only be run on 64 bit machines running 64 bit operating systems. (Most, if not all desktops and laptops sold in the last few years are running on 64 bit processors. Some may not be running 64 bit operating systems, however. Please check your system's documentation.)
 
 ## Installation ##
 1. `git clone --recursive https://github.com/wpengine/hgv.git` to clone the latest version of the tool.
@@ -134,7 +134,7 @@ HGV utilizes Vagrant's [synced folders](http://docs.vagrantup.com/v2/synced-fold
 
 ### Installing plugins and themes ###
 
-Installing new plugins and themes is as simple as putting themes in `[HGV directory]/hgv_data/sites/hhvm/wp-content/[plugins|themes]`
+Installing new plugins and themes is as simple as putting themes in `[HGV directory]/hgv_data/sites/php/wp-content/[plugins|themes]`
 
 ### Command line (CLI) access ###
 

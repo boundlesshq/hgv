@@ -4,7 +4,7 @@ shared_examples 'wordpress::plugins' do
   # WordPress plugins
   #
   wp_paths = %w{
-    /hgv_data/sites/hhvm
+    /hgv_data/sites/php
   }
 
   wp_plugins = %w{

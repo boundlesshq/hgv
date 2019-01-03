@@ -5,7 +5,6 @@ shared_examples 'services::init' do
   #
   services = %w{
     nginx
-    hhvm
     varnish
   }
 

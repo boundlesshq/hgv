@@ -4,9 +4,7 @@ shared_examples 'hosts::init' do
   # Hosts are resolvable? or reachable?
   #
   hosts = %w{
-    hhvm.hgv.test
     php.hgv.test
-    cache.hhvm.hgv.test
     cache.php.hgv.test
     admin.hgv.test
     xhprof.hgv.test

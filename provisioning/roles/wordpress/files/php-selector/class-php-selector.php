@@ -74,13 +74,6 @@ class PHPSelector
         // adds a child node to site name parent node
         $wp_admin_bar->add_node( array(
                 'parent' => 'php_selector_link',
-                'id'     => 'php-selector-hhvm',
-                'title'  => 'HHVM',
-                'href'   => $this->poweredByHhvm() ? '' : '#hhvm',
-                'meta'   => array('rel' => 'hhvm'),
-        ));
-        $wp_admin_bar->add_node( array(
-                'parent' => 'php_selector_link',
                 'id'     => 'php-selector-five',
                 'title'  => 'PHP 5.5',
                 'href'   => $this->poweredByPhp5() ? '' : '#php5',

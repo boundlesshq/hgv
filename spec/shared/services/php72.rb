@@ -1,4 +1,4 @@
-shared_examples 'services::php71' do
+shared_examples 'services::php72' do
 
     describe package('php7.2-common') do
         it { should be_installed }
