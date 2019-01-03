@@ -39,12 +39,12 @@ fi
 echo
 echo "Updating APT sources."
 echo
-apt-get update > /dev/null
+apt-get -y update > /dev/null
+echo
+echo "Updating Python."
 add-apt-repository ppa:fkrull/deadsnakes-python2.7
-apt-get update
-apt-get y
-apt-get upgrade python
-apt-get y
+apt-get -y update
+apt-get -y upgrade python
 echo
 echo "Installing for Ansible."
 echo
