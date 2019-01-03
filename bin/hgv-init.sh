@@ -55,6 +55,7 @@ echo "Updating Python."
 add-apt-repository ppa:fkrull/deadsnakes-python2.7
 apt-get -y --force-yes update
 apt-get -y --force-yes upgrade python
+apt-get -y --force-yes update
 
 ANS_BIN=`which ansible-playbook`
 

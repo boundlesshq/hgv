@@ -4,6 +4,8 @@
 - name: Install PHP 7.2 packages
   apt: name={{ item }} state=present allow_unauthenticated=yes
   with_items:
+    - php7.2-bz2
+    - php7.2-bcmath
     - php7.2-common
     - php7.2-cli
     - php7.2-curl
@@ -17,6 +19,11 @@
     - php7.2-xml
     - php-memcached
     - php-xdebug
+    - php7.2-intl
+    - php7.2-soap
+    - php7.2-xsl
+    - php7.2-zip
+    - libapache2-mod-php7.2
 
 - name: Push out 7.2 php.ini file
   template:

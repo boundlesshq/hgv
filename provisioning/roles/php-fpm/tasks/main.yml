@@ -6,7 +6,7 @@
   changed_when: "'already installed' not in pecl_result.stdout"
   failed_when: "'already installed' not in pecl_result.stdout and 'completed successfully' not in pecl_result.stdout"
   with_items:
-    - yaml
+    - libyaml
 
 - name: Install PEAR modules
   command: pear install {{ item }}
