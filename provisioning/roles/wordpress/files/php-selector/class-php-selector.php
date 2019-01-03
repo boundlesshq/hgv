@@ -14,10 +14,6 @@ class PHPSelector
      * Calculate the actual PHP version that built this page.
      */
     function backendValue() {
-        // Example, 5.6.99-hhvm
-        if( $this->poweredByHhvm() ) {
-            return 'HHVM';
-        }
         if( $this->poweredByPhp72() ) {
             return 'PHP 7.2';
         }
@@ -34,14 +30,6 @@ class PHPSelector
 
     function getPhpVersion() {
         return substr(phpversion(), 0, 3);
-    }
-
-    function poweredByHhvm() {
-        // Example, 5.6.99-hhvm
-        if( false === strstr(phpversion(), 'hhvm')) {
-            return false;
-        }
-        return true;
     }
 
     function poweredByPhp72() {
