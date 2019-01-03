@@ -43,8 +43,8 @@ apt-get -y update > /dev/null
 echo
 echo "Updating Python."
 add-apt-repository ppa:fkrull/deadsnakes-python2.7
-apt-get -y update
-apt-get -y upgrade python
+apt-get -y --force-yes update
+apt-get -y --force-yes upgrade python
 echo
 echo "Installing for Ansible."
 echo
