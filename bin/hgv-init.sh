@@ -41,11 +41,6 @@ echo "Updating APT sources."
 echo
 apt-get -y update > /dev/null
 echo
-echo "Updating Python."
-add-apt-repository ppa:fkrull/deadsnakes-python2.7
-apt-get -y --force-yes update
-apt-get -y --force-yes upgrade python
-echo
 echo "Installing for Ansible."
 echo
 apt-get -y install software-properties-common
@@ -55,6 +50,11 @@ apt-get -y install ansible
 ansible_version=`dpkg -s ansible 2>&1 | grep Version | cut -f2 -d' '`
 echo
 echo "Ansible installed ($ansible_version)"
+echo
+echo "Updating Python."
+add-apt-repository ppa:fkrull/deadsnakes-python2.7
+apt-get -y --force-yes update
+apt-get -y --force-yes upgrade python
 
 ANS_BIN=`which ansible-playbook`
 
